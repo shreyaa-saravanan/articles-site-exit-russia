@@ -34,9 +34,11 @@ d3.csv("Linked_entities_articles_html_test.csv").then(function(data) {
       // console.log(output[i]['content_var'])
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
+      // add firm name 
       d3.select("tbody").insert("tr").html(
         "<td>" + [i+1] + "</td>" +
         "<td>" + (output[i]['Article.ID'])+"</td>" +
+        "<td>" + (output[i]['token'])+"</td>" +
         "<td>" + (output[i]['content_var'])+"</td>" ) }
   };
   window.resizeTo(screen.width,screen.height)
